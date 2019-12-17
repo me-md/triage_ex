@@ -7,7 +7,6 @@ defmodule Triage.Repo.Migrations.AddSymptomsTable do
       add :name, :string
       add :common_name, :string
       add :sex_filter, :string
-      add :category, :string
       add :seriousness, :string
       add :location, :string
 

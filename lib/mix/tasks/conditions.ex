@@ -1,9 +1,9 @@
-defmodule Mix.Tasks.Import do
+defmodule Mix.Tasks.Conditions do
   use Mix.Task
   alias Triage.Repo
   alias Triage.Condition
 
-	@shortdoc "import symptoms and conditions to db"
+	@shortdoc "import conditions to db"
 
   def run(_) do
     Mix.Task.run("app.start")
