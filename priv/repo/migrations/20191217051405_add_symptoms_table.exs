@@ -3,7 +3,7 @@ defmodule Triage.Repo.Migrations.AddSymptomsTable do
 
   def change do
     create table(:symptoms, primary_key: false) do
-      add :id, :string, primary_key: true
+      add :sid, :string, primary_key: true
       add :name, :string
       add :common_name, :string
       add :sex_filter, :string
