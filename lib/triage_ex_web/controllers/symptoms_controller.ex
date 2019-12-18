@@ -7,6 +7,7 @@ defmodule TriageWeb.SymptomsController do
 	def index(conn, params) do
 		cond do
 			params["location"] -> render conn, "index.json", symptoms: Symptoms.get_symptoms_by_location(params["location"])
+			params["search"] -> render conn, "index.json", symptoms: Symptoms.search(params["search"])
 			true -> render conn, "index.json", symptoms: Symptoms.all
 		end
 	end
