@@ -17,3 +17,6 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
   * `/api/v1/symptoms/:id` -> returns single symptom with id
   * `/api/v1/conditions` -> returns all conditions
   * `/api/v1/conditions/:id` -> returns single condition with id
+  
+  ## Testing
+  run testing suite with `mix test`
