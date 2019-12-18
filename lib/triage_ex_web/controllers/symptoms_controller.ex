@@ -1,11 +1,18 @@
 defmodule TriageWeb.SymptomsController do
 	use TriageWeb, :controller
-	alias Triage.Repo
-	alias Triage.Symptom
+	alias Triage.Symptoms.Symptoms
 
-	def index(conn, _params) do
-		symptoms = Repo.all(Symptom)
-	
-		render conn, "index.json", symptoms: symptoms
+	action_fallback Triage.FallbackController
+
+	def index(conn, params) do
+		cond do
+			params["location"] -> render conn, "index.json", symptoms: Symptoms.get_symptoms_by_location(params["location"])
+			true -> render conn, "index.json", symptoms: Symptoms.all
+		end
 	end
+
+	def show(conn, %{"id" => sid}) do
+		render conn, "show.json", symptom: Symptoms.find_by_sid(sid)
+	end
+
 end
