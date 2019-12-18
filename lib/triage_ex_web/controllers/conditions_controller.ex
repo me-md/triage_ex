@@ -4,8 +4,11 @@ defmodule TriageWeb.ConditionsController do
 
 	action_fallback Triage.FallbackController
 
-	def index(conn, _params) do
-		render conn, "index.json", conditions: Conditions.all
+	def index(conn, params) do
+		cond do
+			params["search"] -> render conn, "index.json", conditions: Conditions.search(params["search"])
+			true -> render conn, "index.json", conditions: Conditions.all
+		end
 	end
 
 	def show(conn, %{"id" => cid}) do
