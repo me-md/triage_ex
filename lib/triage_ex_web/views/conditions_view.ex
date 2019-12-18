@@ -21,7 +21,7 @@ defmodule TriageWeb.ConditionsView do
       severity: condition.severity,
       icd10_code: condition.icd10_code,
       hint: condition.hint,
-      triage_level: condition.icd10_code
+      triage_level: condition.triage_level
       }
   end
 end
