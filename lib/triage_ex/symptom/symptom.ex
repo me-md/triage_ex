@@ -1,4 +1,4 @@
-defmodule Triage.Symptom do
+defmodule Triage.Symptoms.Symptom do
 	use Ecto.Schema
 	import Ecto.Changeset
 	
