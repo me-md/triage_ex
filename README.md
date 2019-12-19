@@ -30,16 +30,16 @@ Conditions
 	  { conditions(search: "search_term")
 		  { 
 		  	id
-			  name
+			name
 		  	common_name
-     sex_filter
-		   category
-     prevalence
-		   acuteness
-		   severity
-		   icd10_code
-		   hint
-		   triage_level
+     			sex_filter
+		   	category
+     			prevalence
+		   	acuteness
+		   	severity
+		   	icd10_code
+		   	hint
+		   	triage_level
 		  } 
   	}
   ```
@@ -50,7 +50,7 @@ Conditions
 	  { symptoms(search: "search_term", location: "search_location")
 		  { 
 		  	id
-			  name
+			name
 		  	common_name
 		  } 
   	}
