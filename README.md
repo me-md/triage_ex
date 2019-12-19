@@ -32,9 +32,9 @@ Conditions
 		 	id
 			name
 		  	common_name
-     			sex_filter
+     		sex_filter
 		   	category
-     			prevalence
+     		prevalence
 		   	acuteness
 		   	severity
 		   	icd10_code
