@@ -24,7 +24,8 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
   * `/api/v1/conditions/:id` -> returns single condition with id
   
 ## V2 GraphQL
-Conditions: **optional** search field will search the condition name, common_name and category for the specified term.
+### Conditions
+**optional** search field will search the condition name, common_name and category for the specified term.
   ```
   query 
   	{ conditions(search: "search_term")
@@ -44,7 +45,8 @@ Conditions: **optional** search field will search the condition name, common_nam
   	}
   ```
   
-  Symptoms: **optional** search field will search the symptom name and common_name for the specified term, **optional** location param will return symptoms in a specified location. -> ["abdomen", "undefined", "head", "back", "chest", "legs", "feet", "groin", "arms"]
+### Symptoms
+**optional** search field will search the symptom name and common_name for the specified term, **optional** location param will return symptoms in a specified location. -> ["abdomen", "undefined", "head", "back", "chest", "legs", "feet", "groin", "arms"]
   ```
   query 
 	  { symptoms(search: "search_term", location: "search_location")
