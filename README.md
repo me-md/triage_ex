@@ -12,7 +12,7 @@ To start your Phoenix server locally:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-## Endpoints
+## V1 Endpoints
 
   * `/api/v1/symptoms` -> returns all symptoms
   * `/api/v1/symptoms?location=x` -> returns all symptoms on body location x
