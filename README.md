@@ -27,9 +27,9 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 Conditions
   ```
   query 
-	  { conditions(search: "search_term")
-		  { 
-		  	id
+  	{ conditions(search: "search_term")
+		{ 
+		 	id
 			name
 		  	common_name
      			sex_filter
