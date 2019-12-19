@@ -42,7 +42,10 @@ defmodule Triage.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:poison, "~> 3.1"},
-      {:ex_machina, "~> 2.3"}
+      {:ex_machina, "~> 2.3"},
+      {:absinthe, "~> 1.4.16"},
+      {:absinthe_plug, "~> 1.4.7"},
+      {:absinthe_ecto, "~> 0.1.3"}
     ]
   end
 
