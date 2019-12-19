@@ -44,7 +44,7 @@ Conditions: **optional** search field will search the condition name, common_nam
   	}
   ```
   
-  Symptoms: **optional** search field will search the symptom name for the specified term, **optional** location param will return symptoms in a specified location. -> ["abdomen", "undefined", "head", "back", "chest", "legs", "feet", "groin", "arms"]
+  Symptoms: **optional** search field will search the symptom name and common_name for the specified term, **optional** location param will return symptoms in a specified location. -> ["abdomen", "undefined", "head", "back", "chest", "legs", "feet", "groin", "arms"]
   ```
   query 
 	  { symptoms(search: "search_term", location: "search_location")
