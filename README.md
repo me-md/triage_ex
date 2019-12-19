@@ -24,6 +24,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
   * `/api/v1/conditions/:id` -> returns single condition with id
   
 ## V2 GraphQL
+### Endpoint -> `/api/v2`
 ### Conditions
 **optional** search field will search the condition name, common_name and category for the specified term.
   ```
