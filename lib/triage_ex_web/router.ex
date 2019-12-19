@@ -12,4 +12,14 @@ defmodule TriageWeb.Router do
       get "/conditions", ConditionsController, :index
       get "/conditions/:id", ConditionsController, :show
   end
+
+  scope "/api/v2" do
+    pipe_through :api
+    forward "/graphiql", Absinthe.Plug.GraphiQL,
+      schema: TriageWeb.Schema.Schema,
+      interface: :simple
+
+    forward "/", Absinthe.Plug,
+      schema: TriageWeb.Schema.Schema
+  end
 end
