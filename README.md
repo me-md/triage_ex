@@ -12,7 +12,7 @@ To start your Phoenix server locally:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-## V1 Endpoints
+## V1 REST Endpoints
 
   * `/api/v1/symptoms` -> returns all symptoms
   * `/api/v1/symptoms?location=x` -> returns all symptoms on body location x
@@ -22,6 +22,39 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
   * `/api/v1/conditions` -> returns all conditions
   * `/api/v1/conditions?search=x` searches condition name, common_name and category for x
   * `/api/v1/conditions/:id` -> returns single condition with id
+  
+## V2 GraphQL
+Conditions
+  ```
+  query 
+	  { conditions(search: "search_term")
+		  { 
+		  	id
+			  name
+		  	common_name
+     sex_filter
+		   category
+     prevalence
+		   acuteness
+		   severity
+		   icd10_code
+		   hint
+		   triage_level
+		  } 
+  	}
+  ```
+  
+  Symptoms
+  ```
+  query 
+	  { symptoms(search: "search_term", location: "search_location")
+		  { 
+		  	id
+			  name
+		  	common_name
+		  } 
+  	}
+  ```
   
   ## Testing
   run testing suite with `mix test`
