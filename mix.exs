@@ -45,7 +45,7 @@ defmodule Triage.MixProject do
       {:ex_machina, "~> 2.3"},
       {:absinthe, "~> 1.4.16"},
       {:absinthe_plug, "~> 1.4.7"},
-      {:absinthe_ecto, "~> 0.1.3"}
+			{:absinthe_ecto, "~> 0.1.3"}
     ]
   end
 

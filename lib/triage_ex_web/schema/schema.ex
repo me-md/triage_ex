@@ -1,4 +1,4 @@
-defmodule TriageWeb.Schema.Schema do
+defmodule Triage.Schema do
 	use Absinthe.Schema
 	use Absinthe.Ecto, repo: Triage.Repo
   

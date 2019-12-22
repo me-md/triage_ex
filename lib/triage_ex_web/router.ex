@@ -17,10 +17,10 @@ defmodule TriageWeb.Router do
   scope "/api/v2" do
     pipe_through :api
     forward "/graphiql", Absinthe.Plug.GraphiQL,
-      schema: TriageWeb.Schema.Schema,
+      schema: Triage.Schema,
       interface: :simple
 
     forward "/", Absinthe.Plug,
-      schema: TriageWeb.Schema.Schema
+      schema: Triage.Schema
   end
 end
