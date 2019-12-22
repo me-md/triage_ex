@@ -39,6 +39,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 		 	id
 			name
 		  	common_name
+			location
      		sex_filter
 		   	category
      		prevalence
