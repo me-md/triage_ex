@@ -28,6 +28,8 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
   
 ## V2 GraphQL
 ### Endpoint -> `/api/v2`
+### Interface -> `/api/v2/graphiql`
+
 ### GET conditions
 **optional** search field will search the condition name, common_name and category for the specified term.
   ```
