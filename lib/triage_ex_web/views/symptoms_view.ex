@@ -14,7 +14,8 @@ defmodule TriageWeb.SymptomsView do
       id: symptom.sid,
       name: symptom.name,
       common_name: symptom.common_name,
-      location: symptom.location
+			location: symptom.location,
+			sex_filter: symptom.sex_filter
       }
   end
 end

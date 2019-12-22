@@ -15,7 +15,23 @@ defmodule Triage.Symptoms.Symptoms do
   def get_symptoms_by_location(location) do
     query = from s in "symptoms",
     where: s.location == ^location,
-    select: %{sid: s.sid, name: s.name, common_name: s.common_name, location: s.location}
+    select: %{sid: s.sid, name: s.name, common_name: s.common_name, location: s.location, sex_filter: s.sex_filter}
+
+    Repo.all(query)
+	end
+
+	def get_risk_factors do
+		query = from s in "symptoms",
+    where: s.category == "Risk factors",
+    select: %{sid: s.sid, name: s.name, common_name: s.common_name, location: s.location, sex_filter: s.sex_filter}
+
+    Repo.all(query)
+	end
+	
+	def symptoms_by_gender(sex_filter) do
+    query = from s in "symptoms",
+    where: s.sex_filter == ^sex_filter,
+    select: %{sid: s.sid, name: s.name, common_name: s.common_name, location: s.location, sex_filter: s.sex_filter}
 
     Repo.all(query)
   end
@@ -25,7 +41,7 @@ defmodule Triage.Symptoms.Symptoms do
     where: ilike(s.name, ^"%#{string}%"),
     or_where: ilike(s.common_name, ^"%#{string}%"),
     or_where: ilike(s.location, ^"%#{string}%"),
-    select: %{sid: s.sid, name: s.name, common_name: s.common_name, location: s.location}
+    select: %{sid: s.sid, name: s.name, common_name: s.common_name, location: s.location, sex_filter: s.sex_filter}
 
     Repo.all(query)
   end
