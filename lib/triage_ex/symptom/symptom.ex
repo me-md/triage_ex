@@ -7,6 +7,7 @@ defmodule Triage.Symptoms.Symptom do
 		field :name, :string
 		field :common_name, :string
 		field :category, :string
+		field :question, :string
 		field :sex_filter, :string
 		field :seriousness, :string
 		field :location, :string
@@ -16,7 +17,7 @@ defmodule Triage.Symptoms.Symptom do
   
 	def changeset(struct, params \\ %{}) do
 	  struct
-	  |> cast(params, [:sid, :name, :common_name, :category, :sex_filter, :seriousness, :location])
+	  |> cast(params, [:sid, :name, :common_name, :category, :question, :sex_filter, :seriousness, :location])
 	  |> validate_required([:sid])
 	end
-  end
+end
