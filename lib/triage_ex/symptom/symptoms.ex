@@ -22,7 +22,11 @@ defmodule Triage.Symptoms.Symptoms do
 
 	def get_risk_factors do
 		query = from s in "symptoms",
-    where: s.category == "Risk factors",
+		where: s.sid == "p_7",
+		or_where: s.sid == "p_8",
+		or_where: s.sid == "p_9",
+		or_where: s.sid == "p_10",
+		or_where: s.sid == "p_28",
     select: %{sid: s.sid, name: s.name, common_name: s.common_name, location: s.location, sex_filter: s.sex_filter}
 
     Repo.all(query)
