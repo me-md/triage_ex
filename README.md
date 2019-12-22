@@ -14,13 +14,15 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 ## V1 REST Endpoints
 
-  * `/api/v1/symptoms` -> returns all symptoms
+  * `/api/v1/symptoms` -> returns all symptoms (including risk factors)
+  * `/api/v1/risks` -> returns all risk factors
   * `/api/v1/symptoms?location=x` -> returns all symptoms on body location x
     * available bodyparts: ["abdomen", "undefined", "head", "back", "chest", "legs", "feet", "groin", "arms"]
-  * `/api/v1/symptoms?search=x` searches symptom name, common_name and location for x
+  * `/api/v1/symptoms?search=x` -> searches symptom name, common_name and location for x
+  * `/api/v1/symptoms?sex_filter=x` -> returns symptoms for each sex filter (male, female or both)
   * `/api/v1/symptoms/:id` -> returns single symptom with id
   * `/api/v1/conditions` -> returns all conditions
-  * `/api/v1/conditions?search=x` searches condition name, common_name and category for x
+  * `/api/v1/conditions?search=x` -> searches condition name, common_name and category for x
   * `/api/v1/conditions/:id` -> returns single condition with id
   
 ## V2 GraphQL
