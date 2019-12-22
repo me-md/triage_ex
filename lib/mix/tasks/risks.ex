@@ -1,13 +1,13 @@
-defmodule Mix.Tasks.Symptoms do
+defmodule Mix.Tasks.Risks do
   use Mix.Task
   alias Triage.Repo
   alias Triage.Symptoms.Symptom
 
-	@shortdoc "import symptoms to db"
+	@shortdoc "import risk factors to symptoms db"
 
   def run(_) do
     Mix.Task.run("app.start")
-	  {:ok, symptom_data} = File.read("./priv/repo/raw_data/symptoms.json")
+	  {:ok, symptom_data} = File.read("./priv/repo/raw_data/riskFactors.json")
     raw = Poison.decode!(symptom_data)
     Enum.each(raw, fn symptom -> 
       Symptom.changeset(%Symptom{}, %{sid: symptom["id"], 
