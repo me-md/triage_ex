@@ -6,9 +6,10 @@ defmodule Triage.Factory do
 		sid: sequence(:sid, &"s_#{&1}"),
         name: "Abdominal guarding",
         common_name: "Abdominal guarding",
+				question: nil,
         sex_filter: "both",
         seriousness: "emergency",
-        location: "abdomen"
+				location: "abdomen"
 	  }
 	end
 

@@ -27,7 +27,7 @@ defmodule Triage.Symptoms.Symptoms do
 		or_where: s.sid == "p_9",
 		or_where: s.sid == "p_10",
 		or_where: s.sid == "p_28",
-    select: %{sid: s.sid, name: s.name, common_name: s.common_name, location: s.location, sex_filter: s.sex_filter}
+    select: %{sid: s.sid, name: s.name, question: s.question, common_name: s.common_name, location: s.location, sex_filter: s.sex_filter}
 
     Repo.all(query)
 	end

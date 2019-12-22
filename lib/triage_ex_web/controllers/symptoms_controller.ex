@@ -14,7 +14,7 @@ defmodule TriageWeb.SymptomsController do
 	end
 
 	def risks(conn, _params) do
-		render conn, "index.json", symptoms: Symptoms.get_risk_factors
+		render conn, "riskindex.json", symptoms: Symptoms.get_risk_factors
 	end
 
 	def show(conn, %{"id" => sid}) do

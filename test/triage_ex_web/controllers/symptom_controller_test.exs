@@ -71,7 +71,7 @@ defmodule Triage.SymptomsControllerTest do
 	  assert json_response(conn, 200) == %{
 		"data" => [
 			%{"common_name" => List.first(symptoms).common_name, 
-				"id" => List.first(symptoms).sid, 
+				"id" => List.first(symptoms).sid,
 				"location" => List.first(symptoms).location,
 				"sex_filter" => List.first(symptoms).sex_filter, 
 				"name" => List.first(symptoms).name}, 
@@ -89,6 +89,7 @@ defmodule Triage.SymptomsControllerTest do
 																name: "evetteitus", 
 																common_name: "evetteitus maximus",
 																category: "riskay",
+																question: "do u have evetteitus?",
 																sex_filter: "both",
 																seriousness: "v srs",
 																location: "errrywhere"
@@ -101,7 +102,8 @@ defmodule Triage.SymptomsControllerTest do
 		"data" => [
 			%{"common_name" => "evetteitus maximus", 
 			"id" => "p_7", 
-			"location" => "errrywhere", 
+			"location" => "errrywhere",
+			"question" => "do u have evetteitus?",
 			"name" => "evetteitus", 
 			"sex_filter" => "both"}
 		]
