@@ -19,6 +19,14 @@ defmodule Triage.Symptoms.Symptoms do
 
     Repo.all(query)
 	end
+
+	def get_risk_factors do
+		query = from s in "symptoms",
+    where: s.category == "Risk factors",
+    select: %{sid: s.sid, name: s.name, common_name: s.common_name, location: s.location, sex_filter: s.sex_filter}
+
+    Repo.all(query)
+	end
 	
 	def symptoms_by_gender(sex_filter) do
     query = from s in "symptoms",

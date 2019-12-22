@@ -7,7 +7,8 @@ defmodule TriageWeb.Router do
 
   scope "/api/v1", TriageWeb do
     pipe_through :api
-      get "/symptoms", SymptomsController, :index
+			get "/symptoms", SymptomsController, :index
+			get "/risks", SymptomsController, :risks
       get "/symptoms/:id", SymptomsController, :show
       get "/conditions", ConditionsController, :index
       get "/conditions/:id", ConditionsController, :show
