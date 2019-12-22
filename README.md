@@ -8,6 +8,7 @@ To start your Phoenix server locally:
   * Create and migrate your database with `mix ecto.setup`
   * Upload symptoms db with mix task `mix symptoms`
   * Upload conditions db with mix task `mix conditions`
+  * Upload risk factors db with mix task `mix risks`
   * Start Phoenix endpoint with `mix phx.server`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
