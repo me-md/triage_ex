@@ -14,7 +14,8 @@ defmodule Mix.Tasks.Risks do
                                   name: symptom["name"], 
 																	common_name: symptom["common_name"],
 																	category: symptom["category"],
-                                  sex_filter: symptom["sex_filter"],
+																	sex_filter: symptom["sex_filter"],
+																	question: symptom["question"],
                                   seriousness: symptom["seriousness"],
                                   location: set_location(symptom["name"])
                                   })
