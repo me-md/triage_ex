@@ -2,12 +2,11 @@ defmodule Triage.ConditionsResolverTest do
 	use TriageWeb.ConnCase
 	import Triage.Factory
 	use ExUnit.Case, async: true
-	import Absinthe.Resolution.Helpers
 	alias Triage.AbsintheHelper
 	use Plug.Test
 
 	test "#index renders all conditions", context do
-		conditions = insert_pair(:condition)
+		insert_pair(:condition)
 		query = """
         {
           conditions {
