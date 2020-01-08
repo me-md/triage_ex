@@ -2,7 +2,6 @@ defmodule Triage.SymptomssResolverTest do
 	use TriageWeb.ConnCase
 	import Triage.Factory
 	use ExUnit.Case, async: true
-	import Absinthe.Resolution.Helpers
 	alias Triage.AbsintheHelper
 	use Plug.Test
 
