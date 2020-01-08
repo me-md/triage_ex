@@ -12,4 +12,8 @@ defmodule TriageWeb.Resolvers.Symptom do
 	def symptom_by_id(_, %{id: sid}, _) do
 	  {:ok, Symptoms.find_by_sid(sid)}
 	end
+
+	def risk_factors(_, _params, _) do
+		{:ok, Symptoms.get_risk_factors}
+	end
 end

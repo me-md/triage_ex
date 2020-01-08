@@ -3,11 +3,16 @@ defmodule Triage.Schema do
 	use Absinthe.Ecto, repo: Triage.Repo
   
 	query do
-	  @desc "Get a list of symptoms"
+	  @desc "Get a list of all symptoms"
     field :symptoms, list_of(:symptom) do
       arg :location, :string
       arg :search, :string
       resolve &TriageWeb.Resolvers.Symptom.symptoms/3
+		end
+		
+		@desc "Get a list of risk factors"
+    field :risks, list_of(:symptom) do
+      resolve &TriageWeb.Resolvers.Symptom.risk_factors/3
 	  end
   
 	  @desc "Get a symptom by its id"
@@ -32,7 +37,8 @@ defmodule Triage.Schema do
 	object :symptom do
 	  field :sid, non_null(:string), name: "id"
 	  field :name, non_null(:string)
-	  field :common_name, non_null(:string)
+		field :common_name, non_null(:string)
+		field :question, non_null(:string)
 	  field :location, non_null(:string)
   end
   
