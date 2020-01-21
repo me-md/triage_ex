@@ -126,6 +126,23 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
      }
 }
 ```
+
+### GET risk_factors
+**Risk Factors include a Question attribute**
+#### Sample body:
+  ```
+  query 
+	  { risks
+		  { 
+		  	id
+			name
+		  	common_name
+		  	question
+		  } 
+  	}
+  ```
+ #### Sample Response:
+
   
   ## Testing
   run testing suite with `mix test --cover`
