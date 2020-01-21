@@ -2,14 +2,6 @@
 
 **Production URL: https://triage-ex.herokuapp.com/**
 
-Tech Stack:
-
-  * Elixir 1.9.1 (compiled with Erlang/OTP 22)
-  * Phoenix 1.4.10
-  * ExUnit
-  * Absinthe
-  * PostgreSQL
-
 To start your Phoenix server locally:
 
   * Install dependencies with `mix deps.get`
@@ -135,4 +127,12 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 ```
   
   ## Testing
-  run testing suite with `mix test`
+  run testing suite with `mix test --cover`
+  
+  ## Tech Stack
+
+  * Elixir 1.9.1 (compiled with Erlang/OTP 22)
+  * Phoenix 1.4.10
+  * ExUnit
+  * Absinthe
+  * PostgreSQL
