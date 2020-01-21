@@ -2,6 +2,14 @@
 
 **Production URL: https://triage-ex.herokuapp.com/**
 
+Tech Stack:
+
+  * Elixir 1.9.1 (compiled with Erlang/OTP 22)
+  * Phoenix 1.4.10
+  * ExUnit
+  * Absinthe
+  * PostgreSQL
+
 To start your Phoenix server locally:
 
   * Install dependencies with `mix deps.get`
