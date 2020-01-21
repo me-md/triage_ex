@@ -33,6 +33,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 ### GET conditions
 **optional** search field will search the condition name, common_name and category for the specified term.
+Sample body:
   ```
   query 
   	{ conditions(search: "search_term")
@@ -51,6 +52,41 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 		  } 
   	}
   ```
+  sample response:
+```
+  {
+    "data": {
+        "conditions": [
+            {
+                "acuteness": "chronic",
+                "category": "Hypertensiology",
+                "common_name": "Cough resulting from reaction to angiotensin-converting enzyme inhibitor drugs",
+                "hint": "Your symptoms may result from used medication. Please report that symptom to your GP.",
+                "icd10_code": "R05, T88.7, Y52.4",
+                "id": "c_926",
+                "name": "ACE inhibitor-induced cough",
+                "prevalence": "very_rare",
+                "severity": "mild",
+                "sex_filter": "both",
+                "triage_level": "consultation"
+            },
+            {
+                "acuteness": "acute_potentially_chronic",
+                "category": "Surgery",
+                "common_name": "Abdominal aortic dissection",
+                "hint": "You may require immediate medical attention, seek emergency care.",
+                "icd10_code": "I71.0",
+                "id": "c_885",
+                "name": "Abdominal aortic dissection",
+                "prevalence": "very_rare",
+                "severity": "severe",
+                "sex_filter": "both",
+                "triage_level": "emergency"
+            }
+           ]
+        }
+    }
+```
   
 ### GET symptoms
 **optional** search field will search the symptom name and common_name for the specified term, **optional** location param will return symptoms in a specified location. -> ["abdomen", "undefined", "head", "back", "chest", "legs", "feet", "groin", "arms"]
