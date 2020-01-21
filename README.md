@@ -32,7 +32,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 ### Endpoint -> `/api/v2`
 ### Interface -> `/api/v2/graphiql`
 
-### GET conditions
+### conditions
 **optional** search field will search the condition name, common_name and category for the specified term.
 #### Sample body
   ```
@@ -89,7 +89,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
     }
 ```
   
-### GET symptoms
+### symptoms
 **optional** search field will search the symptom name and common_name for the specified term, **optional** location param will return symptoms in a specified location. -> ["abdomen", "undefined", "head", "back", "chest", "legs", "feet", "groin", "arms"]
 #### Sample body:
   ```
@@ -127,7 +127,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 }
 ```
 
-### GET risk_factors
+### risk factors
 **Risk Factors include a Question attribute**
 #### Sample body:
   ```
