@@ -142,6 +142,44 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
   	}
   ```
  #### Sample Response:
+ ```
+ {
+    "data": {
+        "risks": [
+            {
+                "common_name": "Obesity",
+                "id": "p_7",
+                "name": "BMI above 30",
+                "question": "Are you overweight?"
+            },
+            {
+                "common_name": "Diabetes",
+                "id": "p_8",
+                "name": "Diabetes",
+                "question": "Do you have Diabetes?"
+            },
+            {
+                "common_name": "High cholesterol",
+                "id": "p_10",
+                "name": "High cholesterol",
+                "question": "Do you have high cholesterol?"
+            },
+            {
+                "common_name": "High blood pressure",
+                "id": "p_9",
+                "name": "Hypertension",
+                "question": "Do you have high blood pressure?"
+            },
+            {
+                "common_name": "Smoking",
+                "id": "p_28",
+                "name": "Smoking",
+                "question": "Are you a tobacco user?"
+            }
+        ]
+    }
+}
+```
 
   
   ## Testing
