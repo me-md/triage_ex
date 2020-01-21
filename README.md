@@ -33,7 +33,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 ### Interface -> `/api/v2/graphiql`
 
 ### __Conditions__
-**optional** search field will search the condition name, common_name and category for the specified term.
+* **optional** search field will search the condition name, common_name and category for the specified term.
 #### Sample body
   ```
   query 
@@ -90,7 +90,8 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 ```
   
 ### __Symptoms__
-**optional** search field will search the symptom name and common_name for the specified term, **optional** location param will return symptoms in a specified location. -> ["abdomen", "undefined", "head", "back", "chest", "legs", "feet", "groin", "arms"]
+* **optional** search field will search the symptom name and common_name for the specified term
+* **optional** location param will return symptoms in a specified location. -> ["abdomen", "undefined", "head", "back", "chest", "legs", "feet", "groin", "arms"]
 #### Sample body:
   ```
   query 
@@ -128,7 +129,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 ```
 
 ### __Risk Factors__
-**Risks include a Question attribute**
+* **Risks include a Question attribute**
 #### Sample body:
   ```
   query 
