@@ -4,6 +4,7 @@
 
 To start your Phoenix server locally:
 
+  * Clone down this repo
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.setup`
   * Upload symptoms db with mix task `mix symptoms`
