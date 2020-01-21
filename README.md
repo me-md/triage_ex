@@ -33,7 +33,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 ### GET conditions
 **optional** search field will search the condition name, common_name and category for the specified term.
-Sample body:
+#### Sample body
   ```
   query 
   	{ conditions(search: "search_term")
@@ -52,7 +52,7 @@ Sample body:
 		  } 
   	}
   ```
-  sample response:
+#### sample response
 ```
   {
     "data": {
