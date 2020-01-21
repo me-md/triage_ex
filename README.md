@@ -90,6 +90,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
   
 ### GET symptoms
 **optional** search field will search the symptom name and common_name for the specified term, **optional** location param will return symptoms in a specified location. -> ["abdomen", "undefined", "head", "back", "chest", "legs", "feet", "groin", "arms"]
+#### Sample body:
   ```
   query 
 	  { symptoms(search: "search_term", location: "search_location")
@@ -100,6 +101,30 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 		  } 
   	}
   ```
+ #### Sample Response:
+ ```
+ {
+    "data": {
+        "symptoms": [
+            {
+                "common_name": "Abdominal guarding",
+                "id": "s_1558",
+                "name": "Abdominal guarding"
+            },
+            {
+                "common_name": "Lump in abdomen",
+                "id": "s_299",
+                "name": "Abdominal mass"
+            },
+            {
+                "common_name": "Abdominal mass, after pregnancy or the removal of molar pregnancy",
+                "id": "s_1293",
+                "name": "Abdominal mass, after pregnancy or the removal of molar pregnancy"
+            }
+	 ]
+     }
+}
+```
   
   ## Testing
   run testing suite with `mix test`
